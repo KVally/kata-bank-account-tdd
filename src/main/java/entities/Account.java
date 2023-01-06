@@ -1,5 +1,7 @@
 package entities;
 
+import exceptions.AmountFormatException;
+
 import java.math.BigDecimal;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -23,7 +25,17 @@ public class Account {
     }
 
     public void deposit(BigDecimal amount) {
-
+        if (amount == null || amount.compareTo(BigDecimal.ZERO)<0) {
+            throw new AmountFormatException();
+        }
+        var transaction = new Transaction(
+                this.accountNumber,
+                this.balance,
+                amount,
+                Transaction.TransactionType.DEPOSIT
+        );
+        transactions.add(transaction);
+        balance = balance.add(amount);
     }
 
     public void withdrawal(BigDecimal amount) {
