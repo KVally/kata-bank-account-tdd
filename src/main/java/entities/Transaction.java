@@ -31,20 +31,11 @@ public class Transaction {
         StringBuilder line = new StringBuilder();
         line.append(this.date)
                 .append("   |   ")
-                .append(isDeposit() ? "" : "-")
                 .append(amount)
                 .append("   |   ")
-                .append(newBalance())
+                .append(balanceBeforeTransaction.add(amount))
                 .append("\n");
         return line.toString();
     }
 
-    public BigDecimal newBalance(){
-        BigDecimal _amount = isDeposit()?amount:amount.negate();
-        return balanceBeforeTransaction.add(_amount);
-    }
-
-    public boolean isDeposit(){
-        return transactionType.equals(TransactionType.DEPOSIT);
-    }
 }

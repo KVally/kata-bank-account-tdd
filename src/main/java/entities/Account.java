@@ -50,7 +50,7 @@ public class Account {
         var transaction = new Transaction(
                 this.accountNumber,
                 this.balance,
-                amount,
+                amount.negate(),
                 Transaction.TransactionType.WITHDRAW
         );
         transactions.add(transaction);
