@@ -147,6 +147,5 @@ class AccountTest {
         assertTrue( statement.contains(depositAmount2.toString()));
         assertTrue( statement.contains(withdrawAmount1.toString()));
         assertEquals(nbLineExpected,account.printStatement().lines().count());
-
     }
 }

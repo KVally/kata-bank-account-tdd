@@ -58,7 +58,11 @@ public class Account {
     }
 
     public String printStatement() {
-        return "";
+        StringBuilder statements = new StringBuilder(Transaction.HEADER);
+        statements.append("\n");
+        for (Transaction transaction:transactions)
+            statements.append(transaction.printLine());
+        return statements.toString();
     }
 
     public BigDecimal getBalance() {
