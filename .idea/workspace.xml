@@ -7,6 +7,7 @@
     <list default="true" id="3107995e-7ccb-4f85-99b2-68dae795bf58" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/AmountFormatException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/ValidationMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entities/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Account.java" afterDir="false" />
     </list>
@@ -90,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673016541608</updated>
-      <workItem from="1673016553380" duration="1847000" />
+      <workItem from="1673016553380" duration="2177000" />
     </task>
     <servers />
   </component>

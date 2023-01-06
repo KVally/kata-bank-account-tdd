@@ -39,4 +39,29 @@ class AccountTest {
         BigDecimal amount = null;
         assertThrows(Exception.class,()->account.deposit(amount));
     }
+
+    @Test
+    void withdrawal() {
+        BigDecimal initialBalance = BigDecimal.valueOf(10_000);
+        Account account = new Account("1000C",initialBalance);
+        BigDecimal withdrawAmount = BigDecimal.valueOf(10_000);
+        account.withdrawal(withdrawAmount);
+
+        assertEquals(BigDecimal.ZERO,account.getBalance());
+    }
+
+    @Test
+    void withdrawalWithNoBalance() {
+        BigDecimal initialBalance = BigDecimal.valueOf(10_000);
+        Account account = new Account("1000C",initialBalance);
+        BigDecimal withdrawAmount = BigDecimal.valueOf(20_000);
+
+        assertThrows(Exception.class,()->account.withdrawal(withdrawAmount));
+    }
+
+    @Test
+    void withdrawalWithNullParameter() {
+        BigDecimal amount = null;
+        assertThrows(Exception.class,()->account.withdrawal(amount));
+    }
 }
