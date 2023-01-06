@@ -64,4 +64,89 @@ class AccountTest {
         BigDecimal amount = null;
         assertThrows(Exception.class,()->account.withdrawal(amount));
     }
+
+
+    @Test
+    void checkTransactionWithEmptyOperation(){
+        assertTrue(account.getTransactions().isEmpty());
+    }
+
+    @Test
+    void checkTransactionWithOperations(){
+        int nbTransactionExpected = 0;
+
+        BigDecimal depositAmount1 = BigDecimal.valueOf(10_000);
+        account.deposit(depositAmount1);
+        nbTransactionExpected++;
+
+        BigDecimal depositAmount2 = BigDecimal.valueOf(3_000);
+        account.deposit(depositAmount2);
+        nbTransactionExpected++;
+
+        BigDecimal withdrawAmount1 = BigDecimal.valueOf(2_000);
+        account.withdrawal(withdrawAmount1);
+        nbTransactionExpected++;
+
+        assertEquals(nbTransactionExpected,account.getTransactions().size());
+    }
+
+    @Test
+    void printStatement() {
+        BigDecimal amount = BigDecimal.valueOf(10_000);
+        long nbLineExpected = 1; // For hearder
+
+        account.deposit(amount);
+        nbLineExpected++;
+
+        account.withdrawal(amount);
+        nbLineExpected++;
+
+        account.deposit(amount);
+        nbLineExpected++;
+
+        System.out.println(account.printStatement());
+
+        assertEquals(nbLineExpected,account.printStatement().lines().count());
+    }
+
+    @Test
+    void checkManyOprerations(){
+        long nbLineExpected = 1; // For hearder
+
+        BigDecimal depositAmount1 = BigDecimal.valueOf(10_000);
+        account.deposit(depositAmount1);
+        nbLineExpected++;
+
+        BigDecimal depositAmount2 = BigDecimal.valueOf(3_000);
+        account.deposit(depositAmount2);
+        nbLineExpected++;
+
+        BigDecimal withdrawAmount1 = BigDecimal.valueOf(2_000);
+        account.withdrawal(withdrawAmount1);
+        nbLineExpected++;
+
+        account.deposit(depositAmount1);
+        nbLineExpected++;
+        account.deposit(depositAmount2);
+        nbLineExpected++;
+        account.withdrawal(withdrawAmount1);
+        nbLineExpected++;
+
+        BigDecimal expectedBalance = BigDecimal.ZERO
+                .add(depositAmount1)
+                .add(depositAmount1)
+                .add(depositAmount2)
+                .add(depositAmount2)
+                .subtract(withdrawAmount1)
+                .subtract(withdrawAmount1);
+
+        String statement = account.printStatement();
+        System.out.println(statement);
+        assertEquals(expectedBalance,account.getBalance());
+        assertTrue( statement.contains(depositAmount1.toString()));
+        assertTrue( statement.contains(depositAmount2.toString()));
+        assertTrue( statement.contains(withdrawAmount1.toString()));
+        assertEquals(nbLineExpected,account.printStatement().lines().count());
+
+    }
 }
