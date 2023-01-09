@@ -67,6 +67,10 @@ public class Account {
         return statements.toString();
     }
 
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
     public BigDecimal getBalance() {
         return balance;
     }
