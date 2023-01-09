@@ -3,6 +3,9 @@ package services;
 import dao.AccountDao;
 import dtos.OperationRequest;
 import entities.Account;
+import exceptions.AccountNumberNotExistException;
+import exceptions.OperationRequestFormatException;
+import exceptions.ValidationMessages;
 
 public class DepositFunds implements Operation<OperationRequest> {
     final AccountDao accountDao;
@@ -13,10 +16,16 @@ public class DepositFunds implements Operation<OperationRequest> {
 
     @Override
     public void execute(OperationRequest operationRequest) {
+        if (operationRequest == null || operationRequest.getAccountNumber() == null)
+            throw new OperationRequestFormatException();
+
+        var account =getAccount(operationRequest.getAccountNumber());
+        account.deposit(operationRequest.getTransactionAmount());
     }
 
     @Override
     public Account getAccount(String accountNumber) {
-        return null;
+        return accountDao.findByAccountNumber(accountNumber)
+                .orElseThrow(AccountNumberNotExistException::new);
     }
 }

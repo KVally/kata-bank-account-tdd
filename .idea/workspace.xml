@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3107995e-7ccb-4f85-99b2-68dae795bf58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/AccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dtos/OperationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/AccountNumberNotExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/OperationRequestFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/DepositFunds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dao/FakeAccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/services/DepositFundsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/ValidationMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/ValidationMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/AccountNumberNotExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/AccountNumberNotExistException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/DepositFunds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DepositFunds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entities/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Account.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +64,7 @@
       <recent name="entities" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.DepositFundsTest">
     <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata-bank-account-tdd" />
       <extension name="coverage">
@@ -88,8 +80,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DepositFundsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata-bank-account-tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.DepositFundsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DepositFundsTest" />
         <item itemvalue="JUnit.AccountTest" />
       </list>
     </recent_temporary>
@@ -103,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673016541608</updated>
       <workItem from="1673016553380" duration="8568000" />
-      <workItem from="1673251154087" duration="1750000" />
+      <workItem from="1673251154087" duration="2478000" />
     </task>
     <servers />
   </component>
