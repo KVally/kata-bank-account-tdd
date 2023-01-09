@@ -12,7 +12,18 @@ public class FakeAccountDao implements AccountDao{
 
     public List<Account> listAccountNumber(){
         List<Account>  listAccount = new ArrayList<>();
-        listAccount.add(new Account("C01", BigDecimal.valueOf(10_000)));
+
+        var account = new Account("C01", BigDecimal.valueOf(10_000));
+        BigDecimal depositAmount1 = BigDecimal.valueOf(10_000);
+        account.deposit(depositAmount1);
+
+        BigDecimal depositAmount2 = BigDecimal.valueOf(3_000);
+        account.deposit(depositAmount2);
+
+        BigDecimal withdrawAmount1 = BigDecimal.valueOf(2_000);
+        account.withdrawal(withdrawAmount1);
+
+        listAccount.add(account);
         listAccount.add(new Account("C02"));
         listAccount.add(new Account("C03"));
 
