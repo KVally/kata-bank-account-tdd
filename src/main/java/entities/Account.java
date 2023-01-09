@@ -2,7 +2,6 @@ package entities;
 
 import exceptions.AmountFormatException;
 import exceptions.InsufficientFundsException;
-import exceptions.ValidationMessages;
 
 import java.math.BigDecimal;
 import java.util.LinkedHashSet;
@@ -27,9 +26,8 @@ public class Account {
     }
 
     public void deposit(BigDecimal amount) {
-        if (amount == null || amount.compareTo(BigDecimal.ZERO)<0) {
-            throw new AmountFormatException();
-        }
+        checkAmountFormat(amount);
+
         var transaction = new Transaction(
                 this.accountNumber,
                 this.balance,
@@ -41,9 +39,7 @@ public class Account {
     }
 
     public void withdrawal(BigDecimal amount) {
-        if (amount == null || amount.compareTo(BigDecimal.ZERO)<0) {
-            throw new AmountFormatException();
-        }
+        checkAmountFormat(amount);
         if (this.balance.compareTo(amount)<0) {
             throw new InsufficientFundsException();
         }
@@ -55,6 +51,12 @@ public class Account {
         );
         transactions.add(transaction);
         balance = balance.subtract(amount);
+    }
+
+    public void checkAmountFormat(BigDecimal amount) {
+        if (amount == null || amount.compareTo(BigDecimal.ZERO)<0) {
+            throw new AmountFormatException();
+        }
     }
 
     public String printStatement() {
