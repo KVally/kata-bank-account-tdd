@@ -15,11 +15,14 @@ public class PrintStatement implements Operation<String> {
 
     @Override
     public void execute(String accountNumber) {
+        var account = getAccount(accountNumber);
+        System.out.println(account.printStatement());
     }
 
     @Override
     public Account getAccount(String accountNumber) {
-        return null;
+        return AccountDao.findByAccountNumber(accountNumber)
+                .orElseThrow(AccountNumberNotExistException::new);
     }
 
 }
