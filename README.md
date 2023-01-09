@@ -36,6 +36,9 @@ User Stories
    I want to see the history (operation, date, amount, balance) of my operations
    
    
-   # NB
+   # NB:
+The Principal class Test is Account's test class.
 
-Principal class Test is Account's test class.
+https://github.com/KVally/kata-bank-account-tdd/blob/main/src/test/java/entities/AccountTest.java
+
+Thank for your attention ;-).
