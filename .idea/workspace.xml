@@ -7,6 +7,9 @@
     <list default="true" id="3107995e-7ccb-4f85-99b2-68dae795bf58" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/WithdrawFunds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/WithdrawFunds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/DepositFunds.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/DepositFunds.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/WithdrawFunds.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/WithdrawFunds.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
       <recent name="entities" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DepositFundsTest">
+  <component name="RunManager" selected="JUnit.WithdrawFundsTest">
     <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata-bank-account-tdd" />
       <extension name="coverage">
@@ -93,8 +96,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WithdrawFundsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata-bank-account-tdd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="services" />
+      <option name="MAIN_CLASS_NAME" value="services.WithdrawFundsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WithdrawFundsTest" />
         <item itemvalue="JUnit.DepositFundsTest" />
         <item itemvalue="JUnit.AccountTest" />
       </list>
@@ -109,7 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673016541608</updated>
       <workItem from="1673016553380" duration="8568000" />
-      <workItem from="1673251154087" duration="3403000" />
+      <workItem from="1673251154087" duration="3571000" />
     </task>
     <servers />
   </component>
