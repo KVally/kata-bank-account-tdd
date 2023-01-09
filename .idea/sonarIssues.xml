@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../kata-bank-account-tdd - Copie/src/main/java/services/PrintStatement.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../kata-bank-account-tdd - Copie/src/test/java/services/DepositFundsTest.java">
           <value>
             <set />
@@ -69,6 +74,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/test/java/services/DepositFundsTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/services/WithdrawFundsTest.java">
           <value>
             <set />
           </value>

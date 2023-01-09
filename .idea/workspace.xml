@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3107995e-7ccb-4f85-99b2-68dae795bf58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/AccountNumberNotExistException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/AccountNumberNotExistException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/DepositFunds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/DepositFunds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/Account.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673016541608</updated>
       <workItem from="1673016553380" duration="8568000" />
-      <workItem from="1673251154087" duration="2478000" />
+      <workItem from="1673251154087" duration="3403000" />
     </task>
     <servers />
   </component>
